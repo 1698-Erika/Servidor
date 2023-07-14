@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Primera Prueba </title>
+</head>
+
+
+<body>
+    <script>
+
+        const persona = {
+            nombre: 'Juan',
+            edad: 30,
+            direccion: {
+                calle: 'Calle Principal 123',
+                ciudad: 'Ciudad Ejemplo'
+            },
+            hobbies: ['lectura', 'pintar', 'jardinería'],
+
+            educacion: [      // Arreglo         
+                  {
+                    titulo: 'Licenciatura en Ciencias',
+                    especialidad: 'Informática',
+                    universidad: 'Universidad Ejemplo'
+                },
+                {
+                    titulo: 'Maestría en Administración de Empresas',
+                    especialidad: 'Marketing',
+                    universidad: 'Otra Universidad'
+                }
+                // educacion[0]
+            ],
+            activo: true,
+            salario: 250
+        }
+
+        const error = {
+            Mensaje: 'Esto es mi objeto error',
+            Estatus: 23
+        }
+
+        console.log(`Mi nombre es ${persona.nombre}`)
+        console.log(`tengo ${persona.edad} de edad`)
+        console.log('Vivo en la' + persona.direccion.calle)
+        console.log( "La "+ persona.direccion.ciudad + " en la que vivo es muy pequeña ")
+        console.log('uni de mis hobbies principales es la' + persona.hobbies[0] )
+        console.log('El'+persona.hobbies[1] + ' más que un hobbies es una habilidad que me gusta realizar')
+        console.log('Mi abuelo me enseño como ser un buen jardinero y ahora la ' +persona.hobbies[2]+ 'es uno de mis hobbies')
+        console.log('Yo estudie' + persona.educacion[0].titulo )
+        console.log('en la especialidad de' + persona.educacion[0].especialidad )
+        console.log('en la universidad' + persona.educacion[0].universidad )
+        console.log("Me gustaria estudiar la carrera de "+persona.educacion[1].titulo)
+        console.log("Tener una especialidad en " + persona.educacion[1].especialidad+ "no me desagrada")
+        console.log('Tendria que buscar' +persona.educacion[1].universidad)
+        console.log("Soy muy bueno en varias cosas, es muy malo tener un salario de " + persona.salario)
+        console.log('Mi novia me dice que puedo encontrar un mejor trabajo dado que soy una persona activa y eso es ' +persona.activo)
+
+
+
+
+
+
+
+
+        let Raul = {
+            nombre: 'Patricio',
+            edad: 25
+        }
+
+        const libro = ['Hola', 'pinche', 'gato']
+
+
+
+
+
+
+
+
+
+
+
+        console.log (persona)
+
+
+
+
+        
+   // console.log (`Mi primo ${persona.nombre}, de ${persona.edad} años de edad vive en la ${persona.direccion.calle} de la ${persona.direccion.ciudad} es 
+   // una persona muy dedicada, tanto que sus hobbies son ${persona.hobbies} de acuerdo a su educacion ya cuenta con un titulo ${persona.educacion.titulo} 
+    //con especialidad en ${persona.educacion.especialidad} y solo entraba a algunas clases en la ${persona.educacion.universidad}. Platicando con el me comento que le gustaria volver 
+    //a estudiar, ahora en ${persona.educacion.universidad} la especialidad de ${persona.educacion.especialidad} con titulacion en ${persona.educacion.titulo}`)
+
+     
+
+        //console.log ('Mi primo' +persona.nombre+ 'de' + persona.edad+ 'años de edad vive en la' +persona.direccion.calle+ 'de la' +persona.direccion.ciudad+ 'es una persona muy dedicada tanto que sus hobbies son' +persona.hobbies+ 'de acuerdo a su educacion ya cuenta con un titulo' +persona.educacion.titulo+ 
+       // con especialidad en' +persona.educacion.especialidad)
+
+
+
+        console.info (` El nombre de la persona es ${persona.nombre}`)
+
+        console.log ('La edad de la persona es' + persona.edad+ 'años')
+
+        console.error (" Esto es un error" + error.Mensaje+ 'su estatus es' +error.Estatus)
+
+
+    </script>
+
+    <p>
+        Hola soy Kika
+    </p>
+</body>
+
+
+</html>
