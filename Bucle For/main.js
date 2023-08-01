@@ -22,6 +22,7 @@ let persona = {
     direccion : 'Calle'
 }
 
+console.log( suma )
 let animalesArray = ['gato','perro','delfin', 5 ,'Lucero',  3, persona]
 for(
     //inicializador
