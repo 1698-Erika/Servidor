@@ -39,65 +39,100 @@ let promedio =0;
 
 
 switch (seleccion) {
- 
-  case "Juan":
-   console.log("El nombre del estudiante es " + estudiantes[0].nombre)
-   console.log( "La edad del estudiantes es " +estudiantes[0].edad)
-     suma = 0;
-     nNotas = 0;
 
-    for (let i = 0; i < estudiantes[0].calificaciones.length; i++) {
-      let notas = estudiantes[0].calificaciones[i];
+    case "Juan":
+        console.log("El nombre del estudiante es " + estudiantes[0].nombre)
+        console.log("La edad del estudiantes es " + estudiantes[0].edad)
+        suma = 0;
+        nNotas = 0;
 
-      console.log( "La nota de la asignatura " +notas.asignatura+ " es: "  +notas.nota)
+        for (let i = 0; i < estudiantes[0].calificaciones.length; i++) {
+            let notas = estudiantes[0].calificaciones[i];
 
-      suma += notas.nota;
+            console.log("La nota de la asignatura " + notas.asignatura + " es: " + notas.nota)
 
-      nNotas++;
-    }
+            suma += notas.nota;
 
-   promedio = suma / nNotas; 
-console.log("El promedio general es: " + promedio+ " de sus " + nNotas + " asignaturas ")
-   
-    break;
+            nNotas++;
+        }
 
-  case "Maria":
-    //        "Juan == 0 ":
-    //console.log("El nombre del estudiante es " + estudiantes[usuarioSeleccionado].nombre)
-    // console.log( "La edad del estudiantes es " +estudiantes[usuarioSeleccionado].edad)
+        promedio = suma / nNotas;
+        console.log("El promedio general es: " + promedio + " de sus " + nNotas + " asignaturas ")
 
-suma = 0;
-nNotas= 0;
+        break;
 
-    for (
-      let i = 0;
-      i < estudiantes[1].calificaciones.length;
-      i++
-    ) {
-      let notas = estudiantes[1].calificaciones[i];
+    case "Maria":
+        console.log("El nombre del estudiante es " + estudiantes[1].nombre)
+        console.log("La edad del estudiantes es " + estudiantes[1].edad)
+        suma = 0;
+        nNotas = 0;
 
-      //console.log(notas.nota)
-      //console.log(notas.asignatura)
+        for (let i = 0; i < estudiantes[1].calificaciones.length; i++) {
+            let notas = estudiantes[1].calificaciones[i];
 
-      suma += notas.nota;
+            console.log("La nota de la asignatura " + notas.asignatura + " es: " + notas.nota)
 
-      nNotas++;
-    }
-    promedio = suma / nNotas; 
+            suma += notas.nota;
 
-    break;
+            nNotas++;
+        }
 
-  default:
-    console.log("Usuario no existe en la base de datos");
-    break;
+        promedio = suma / nNotas;
+        console.log("El promedio general es: " + promedio + " de sus " + nNotas + " asignaturas ")
 
-  //Juan
-  // console.log(`EL usuario' +estudiantes[0].nombre+ 'tiene la edad de' +estudiante[0].edad+ 'observamos que en la asignatura de ' + estudiante[0].calificaciones[0]+
-  //'obtuvo la nota ' +estudiantes[0].calificaciones[0].nota+ 'su segunda asignatura )
-  // Maria
-  //  console.log(`EL usuario' +estudiante.nombre+ 'tiene la edad de' +estudiante.edad+ 'observamos que en la asignatura de ' + estudiante.calificaciones[0]+
-  //'obtuvo la nota ' +estudiante.calificaciones.nota 'su segunda asignatura )
-  //Pedro
-  //console.log(`EL usuario' +estudiante.nombre+ 'tiene la edad de' +estudiante.edad+ 'observamos que en la asignatura de ' + estudiante.calificaciones[0]+
-  //'obtuvo la nota ' +estudiante.calificaciones.nota 'su segunda asignatura')
+        break;
+
+
+    case "Pedro":
+        console.log("El nombre del estudiante es " + estudiantes[2].nombre)
+        console.log("La edad del estudiantes es " + estudiantes[2].edad)
+        suma = 0;
+        nNotas = 0;
+
+        for (let i = 0; i < estudiantes[2].calificaciones.length; i++) {
+            let notas = estudiantes[2].calificaciones[i];
+
+            console.log("La nota de la asignatura " + notas.asignatura + " es: " + notas.nota)
+
+            suma += notas.nota;
+
+            nNotas++;
+        }
+
+        promedio = suma / nNotas;
+        console.log("El promedio general es: " + promedio + " de sus " + nNotas + " asignaturas ")
+
+        break;
+
+        case "todos" :
+        for(let j = 0; j < estudiantes.length; j++){
+         let usuarios = estudiantes[j];
+             
+         console.log("El nombre del estudiante es " + usuarios.nombre)
+        console.log("La edad del estudiantes es " + usuarios.edad)
+
+        suma = 0;
+        nNotas = 0;
+
+        for (let i = 0; i < usuarios.calificaciones.length; i++) {
+            let notas = usuarios.calificaciones[i];
+
+            console.log("La nota de la asignatura " + notas.asignatura + " es: " + notas.nota)
+
+            suma += notas.nota;
+
+            nNotas++;
+        }
+
+        promedio = suma / nNotas;
+        console.log("El promedio general es: " + promedio + " de sus " + nNotas + " asignaturas ")
+          
+    
+      }
+      break;
+
+    default:
+        console.log("Usuario no existe en la base de datos");
+        break;
+
 }
