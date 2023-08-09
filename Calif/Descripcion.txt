@@ -1,0 +1,70 @@
+
+
+if (seleccion === estudiantes.nombre) {
+  indEstudiante = "Juan";
+} else if (seleccion === estudiantes.nombre) {
+  indEstudiante = "Maria";
+} else if (seleccion === estudiantes.nombre) {
+  indEstudiante = "Pedro";
+}
+
+//Juan
+console.log(
+  " EL usuario " +
+    estudiantes[0].nombre +
+    " tiene la edad de " +
+    estudiantes[0].edad +
+    " años, observamos que en la asignatura de " +
+    estudiantes[0].calificaciones[0].asignatura +
+    " obtuvo la nota " +
+    estudiantes[0].calificaciones[0].nota +
+    " su segunda asignatura "
+);
+//Maria
+console.log(
+  "EL usuario" +
+    estudiantes[1].nombre +
+    "tiene la edad de" +
+    estudiantes.edad +
+    "observamos que en la asignatura de " +
+    estudiantes.calificaciones[0] +
+    "obtuvo la nota " +
+    estudiantes.calificaciones.nota +
+    "su segunda asignatura "
+);
+//Pedro
+console.log(
+  "EL usuario" +
+    estudiantes[2].nombre +
+    "tiene la edad de" +
+    estudiantes.edad +
+    "observamos que en la asignatura de " +
+    estudiantes.calificaciones[0] +
+    "obtuvo la nota " +
+    estudiantes.calificaciones.nota +
+    "su segunda asignatura"
+)
+ console.log(
+      "El usuario " +
+        estudiantes[0].nombre +
+        " con edad de " +
+        estudiantes[0].edad +
+        " años,curso las asignaturas de " +
+        estudiantes[0].calificaciones[0].asignatura +
+        "," +
+        estudiantes[0].calificaciones[1].asignatura +
+        "," +
+        estudiantes[0].calificaciones[2].asignatura +
+        " en estas " +
+        nNotas +
+        " obtuvo un promedio general de " +
+        promedio +
+        " con las notas en cada una de " +
+        estudiantes[0].calificaciones[0].nota +
+        "," +
+        estudiantes[0].calificaciones[1].nota +
+        "," +
+        estudiantes[0].calificaciones[2].nota +
+        "."
+    );            
+

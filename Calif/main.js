@@ -105,6 +105,7 @@ switch (seleccion) {
         break;
 
         case "todos" :
+          
         for(let j = 0; j < estudiantes.length; j++){
          let usuarios = estudiantes[j];
              
