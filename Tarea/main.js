@@ -65,7 +65,12 @@ const tareas = [
   },
 ];
 
+
 let solicitud = prompt("Ingresa el nombre de tu proyecto");
+let  i = 0 ; 
+while (i  <  tareas.length ){
+console.log(+solicitud+ i++ )
+}
 
 if (tareas[0].titulo === solicitud) {
   console.log("Titulo: " + tareas[0].titulo);
@@ -86,6 +91,9 @@ if (tareas[0].titulo === solicitud) {
     console.log(info.nombre);
     console.log(info.calificacion);
   }
+
+  solicitud = prompt("Ingresa el nombre de tu proyecto");
+
 } else if (tareas[1].titulo === solicitud) {
   console.log("Titulo: " + tareas[1].titulo);
   console.log("Descripcion general: " + tareas[1].descripcion);
@@ -104,6 +112,7 @@ if (tareas[0].titulo === solicitud) {
     console.log(info.nombre);
     console.log(info.calificacion);
   }
+  solicitud = prompt("Ingresa el nombre de tu proyecto");
 } else if (tareas[2].titulo === solicitud) {
   console.log("Titulo: " + tareas[2].titulo);
   console.log("Descripcion general: " + tareas[2].descripcion);
