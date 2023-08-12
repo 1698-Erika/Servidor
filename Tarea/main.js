@@ -6,8 +6,8 @@ const tareas = [
     completada: false,
     actividades: [
       {
-        nombre: "ejemplo",
-        calificacion: 10,
+        nombre: "Conclusion general",
+        calificacion: 8,
       },
     ],
   },
@@ -18,7 +18,7 @@ const tareas = [
     completada: true,
     actividades: [
       {
-        nombre: "Lectura",
+        nombre: "Correr 10 kilometros",
         calificacion: 10,
       },
     ],
@@ -30,8 +30,8 @@ const tareas = [
     completada: false,
     actividades: [
       {
-        nombre: "ejemplo",
-        calificacion: 10,
+        nombre: "Debatir sobre tema de interes",
+        calificacion: 9,
       },
     ],
   },
@@ -42,12 +42,12 @@ const tareas = [
     completada: true,
     actividades: [
       {
-        nombre: "ejemplo",
-        calificacion: 10,
+        nombre: "Implementacion de imagenes",
+        calificacion: 8,
       },
       {
-        nombre: "ejemplo2",
-        calificacion: 10,
+        nombre: "Implementacion de opciones multiples",
+        calificacion: 9,
       },
     ],
   },
@@ -58,129 +58,134 @@ const tareas = [
     completada: false,
     actividades: [
       {
-        nombre: "ejemplo",
-        calificacion: 10,
+        nombre: "Resumen de inovaciones",
+        calificacion: 9,
       },
     ],
   },
 ];
 
+let solicitud;
+while (solicitud !== 6 ) {
+    console.log( "---Proyectos expuestos para solicitar---")
+  console.log("1:" + tareas[0].titulo);
+  console.log("2:" + tareas[1].titulo);
+  console.log("3:" + tareas[2].titulo);
+  console.log("4:" + tareas[3].titulo);
+  console.log("5:" + tareas[4].titulo);
+  console.log("6: Salir");
 
-let solicitud = prompt("Ingresa el nombre de tu proyecto");
-let  i = 0 ; 
-while (i  <  tareas.length ){
-console.log(+solicitud+ i++ )
-}
+  solicitud = parseInt(prompt("Ingresa el numero del proyecto a solicitar"))
 
-if (tareas[0].titulo === solicitud) {
-  console.log("Titulo: " + tareas[0].titulo);
-  console.log("Descripcion general: " + tareas[0].descripcion);
-  console.log(
-    "El desarrollo del proyecto tiene una prioridad: " + tareas[0].prioridad
-  );
+  if (solicitud === 1) {
+    console.log("Titulo del proyecto numero 1: " + tareas[0].titulo);
+    console.log("Descripcion general: " + tareas[0].descripcion);
+    console.log(
+      "El desarrollo del proyecto tiene una prioridad: " + tareas[0].prioridad
+    );
 
-  if (tareas[0].completada === true) {
-    console.log("El proyecto indicado no esta terminado");
-  } else {
-    console.log("El proyecto indicado, se encuentra finalizado");
+    if (tareas[0].completada === true) {
+      console.log("El proyecto indicado no esta terminado");
+    } else {
+      console.log("El proyecto indicado, se encuentra finalizado");
+    }
+
+    for (i = 0; i < tareas[0].actividades.length; i++) {
+      let info = tareas[0].actividades[i];
+
+      console.log(info.nombre);
+      console.log(info.calificacion);
+    }
+
+  } else if (solicitud === 2) {
+    console.log("Titulo del proyecto numero 2: " + tareas[1].titulo);
+    console.log("Descripcion general: " + tareas[1].descripcion);
+    console.log(
+      "El desarrollo del proyecto tiene una prioridad: " + tareas[1].prioridad
+    );
+
+    if (tareas[1].completada === true) {
+      console.log("El proyecto indicado no esta terminado");
+    } else {
+      console.log("El proyecto indicado, se encuentra finalizado");
+    }
+    for (i = 0; i < tareas[1].actividades.length; i++) {
+      let info = tareas[1].actividades[i];
+
+      console.log(info.nombre);
+      console.log(info.calificacion);
+    }
+   
+
+  } else if (solicitud === 3) {
+    console.log("Titulo del proyecto numero 3: " + tareas[2].titulo);
+    console.log("Descripcion general: " + tareas[2].descripcion);
+    console.log(
+      "El desarrollo del proyecto tiene una prioridad: " + tareas[2].prioridad
+    );
+
+    if (tareas[2].completada === true) {
+      console.log("El proyecto indicado no esta terminado");
+    } else {
+      console.log("El proyecto indicado, se encuentra finalizado");
+    }
+    for (i = 0; i < tareas[2].actividades.length; i++) {
+      let info = tareas[2].actividades[i];
+
+      console.log(info.nombre);
+      console.log(info.calificacion);
+    }
+  } else if (solicitud === 4) {
+    console.log("Titulo del proyecto numero 4: " + tareas[3].titulo);
+    console.log("Descripcion general: " + tareas[3].descripcion);
+    console.log(
+      "El desarrollo del proyecto tiene una prioridad: " + tareas[3].prioridad
+    );
+
+    if (tareas[3].completada === true) {
+      console.log("El proyecto indicado no esta terminado");
+    } else {
+      console.log("El proyecto indicado, se encuentra finalizado");
+    }
+    for (i = 0; i < tareas[3].actividades.length; i++) {
+      let info = tareas[3].actividades[i];
+
+      console.log(info.nombre);
+      console.log(info.calificacion);
+    }
+  } else if (solicitud === 5) {
+    console.log("Titulo del proyecto numero 5: " + tareas[4].titulo);
+    console.log("Descripcion general: " + tareas[4].descripcion);
+    console.log(
+      "El desarrollo del proyecto tiene una prioridad: " + tareas[4].prioridad
+    );
+    if (tareas[4].completada === true) {
+      console.log("El proyecto indicado no esta terminado");
+    } else {
+      console.log("El proyecto indicado, se encuentra finalizado");
+    }
+    for (i = 0; i < tareas[4].actividades.length; i++) {
+      let info = tareas[4].actividades[i];
+
+      console.log(info.nombre);
+      console.log(info.calificacion);
+    }
+  } else if (solicitud === "Todos") {
+    for (let j = 0; j < tareas.length; j++) {
+      let tarea = tareas[j];
+
+      console.log("Titulo: " + tarea.titulo);
+      console.log("Descripcion general: " + tarea.descripcion);
+      console.log(
+        "El desarrollo del proyecto tiene una prioridad: " + tarea.prioridad
+      );
+
+      for (i = 0; i < tarea.actividades.length; i++) {
+        let info = tarea.actividades[i];
+
+        console.log(info.nombre);
+        console.log(info.calificacion);
+      }
+    }
   }
-
-  for (i = 0; i < tareas[0].actividades.length; i++) {
-    let info = tareas[0].actividades[i];
-
-    console.log(info.nombre);
-    console.log(info.calificacion);
-  }
-
-  solicitud = prompt("Ingresa el nombre de tu proyecto");
-
-} else if (tareas[1].titulo === solicitud) {
-  console.log("Titulo: " + tareas[1].titulo);
-  console.log("Descripcion general: " + tareas[1].descripcion);
-  console.log(
-    "El desarrollo del proyecto tiene una prioridad: " + tareas[1].prioridad
-  );
-
-  if (tareas[1].completada === true) {
-    console.log("El proyecto indicado no esta terminado");
-  } else {
-    console.log("El proyecto indicado, se encuentra finalizado");
-  }
-  for (i = 0; i < tareas[1].actividades.length; i++) {
-    let info = tareas[1].actividades[i];
-
-    console.log(info.nombre);
-    console.log(info.calificacion);
-  }
-  solicitud = prompt("Ingresa el nombre de tu proyecto");
-} else if (tareas[2].titulo === solicitud) {
-  console.log("Titulo: " + tareas[2].titulo);
-  console.log("Descripcion general: " + tareas[2].descripcion);
-  console.log(
-    "El desarrollo del proyecto tiene una prioridad: " + tareas[2].prioridad
-  );
-
-  if (tareas[2].completada === true) {
-    console.log("El proyecto indicado no esta terminado");
-  } else {
-    console.log("El proyecto indicado, se encuentra finalizado");
-  }
-  for (i = 0; i < tareas[2].actividades.length; i++) {
-    let info = tareas[2].actividades[i];
-
-    console.log(info.nombre);
-    console.log(info.calificacion);
-  }
-} else if (tareas[3].titulo === solicitud) {
-  console.log("Titulo: " + tareas[3].titulo);
-  console.log("Descripcion general: " + tareas[3].descripcion);
-  console.log(
-    "El desarrollo del proyecto tiene una prioridad: " + tareas[3].prioridad
-  );
-
-  if (tareas[3].completada === true) {
-    console.log("El proyecto indicado no esta terminado");
-  } else {
-    console.log("El proyecto indicado, se encuentra finalizado");
-  }
-  for (i = 0; i < tareas[3].actividades.length; i++) {
-    let info = tareas[3].actividades[i];
-
-    console.log(info.nombre);
-    console.log(info.calificacion);
-  }
-} else if (tareas[4].titulo === solicitud) {
-  console.log("Titulo: " + tareas[4].titulo);
-  console.log("Descripcion general: " + tareas[4].descripcion);
-  console.log(
-    "El desarrollo del proyecto tiene una prioridad: " + tareas[4].prioridad
-  );
-  if (tareas[4].completada === true) {
-    console.log("El proyecto indicado no esta terminado");
-  } else {
-    console.log("El proyecto indicado, se encuentra finalizado");
-  }
-  for (i = 0; i < tareas[4].actividades.length; i++) {
-    let info = tareas[4].actividades[i];
-
-    console.log(info.nombre);
-    console.log(info.calificacion);
-  }
-} else if (solicitud === "Todos") {
-
-  
-  for (let j = 0; j < tareas.length; j++) {
-    let tarea = tareas[j]
-
-    console.log("Titulo: " + tarea.titulo);
-    console.log("Descripcion general: " + tarea.descripcion);
-    console.log("El desarrollo del proyecto tiene una prioridad: " + tarea.prioridad  );
-  
-  for (i = 0; i < tarea.actividades.length; i++) {
-    let info = tarea.actividades[i];
-
-    console.log(info.nombre);
-    console.log(info.calificacion);
-  }
-}
 }
