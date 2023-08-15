@@ -93,8 +93,8 @@ while (solicitud !== 6 ) {
     for (i = 0; i < tareas[0].actividades.length; i++) {
       let info = tareas[0].actividades[i];
 
-      console.log(info.nombre);
-      console.log(info.calificacion);
+      console.log ("Actividad: " +info.nombre);
+      console.log("La calificacion es: " +info.calificacion);
     }
 
   } else if (solicitud === 2) {
@@ -112,8 +112,8 @@ while (solicitud !== 6 ) {
     for (i = 0; i < tareas[1].actividades.length; i++) {
       let info = tareas[1].actividades[i];
 
-      console.log(info.nombre);
-      console.log(info.calificacion);
+      console.log("Actividad: " + info.nombre);
+      console.log("La calificacion es: " +info.calificacion);
     }
    
 
@@ -132,8 +132,8 @@ while (solicitud !== 6 ) {
     for (i = 0; i < tareas[2].actividades.length; i++) {
       let info = tareas[2].actividades[i];
 
-      console.log(info.nombre);
-      console.log(info.calificacion);
+      console.log("Actividad: " +info.nombre);
+      console.log("La calificacion es: " +info.calificacion);
     }
   } else if (solicitud === 4) {
     console.log("Titulo del proyecto numero 4: " + tareas[3].titulo);
@@ -150,8 +150,8 @@ while (solicitud !== 6 ) {
     for (i = 0; i < tareas[3].actividades.length; i++) {
       let info = tareas[3].actividades[i];
 
-      console.log(info.nombre);
-      console.log(info.calificacion);
+      console.log("Actividad: " +info.nombre);
+      console.log("La calificacion es: " +info.calificacion);
     }
   } else if (solicitud === 5) {
     console.log("Titulo del proyecto numero 5: " + tareas[4].titulo);
@@ -167,8 +167,8 @@ while (solicitud !== 6 ) {
     for (i = 0; i < tareas[4].actividades.length; i++) {
       let info = tareas[4].actividades[i];
 
-      console.log(info.nombre);
-      console.log(info.calificacion);
+      console.log("Actividad: " +info.nombre);
+      console.log("La calificacion es: " +info.calificacion);
     }
   } else if (solicitud === "Todos") {
     for (let j = 0; j < tareas.length; j++) {
@@ -183,8 +183,8 @@ while (solicitud !== 6 ) {
       for (i = 0; i < tarea.actividades.length; i++) {
         let info = tarea.actividades[i];
 
-        console.log(info.nombre);
-        console.log(info.calificacion);
+        console.log( "Actividad: " +info.nombre);
+        console.log("La calificacion es: " +info.calificacion);
       }
     }
   }
