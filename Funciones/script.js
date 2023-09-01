@@ -41,25 +41,26 @@ ejemplo("Raul")
 
 
 
-// function showCalifications(calificaciones) {
-//   for (let i = 0; i < calificaciones.length; i++) {
-//     const e = calificaciones[i];
-//     console.log("Asignatura ", e.asignatura);
-//     console.log("Nota", e.nota);
-//   }
-// }
-// function findEstudent(nombre, array) {
-//   array.filter((miNuevoEstudiante) => {
-//     if (miNuevoEstudiante.nombre === nombre) {
-//       console.log("El nombre del estudainte es: ", miNuevoEstudiante.nombre);
-//       console.log("La edad del estudaiante es: ", miNuevoEstudiante.edad);
-//       if (miNuevoEstudiante.calificaciones.length !== 0) {
-//         showCalifications(miNuevoEstudiante.calificaciones);
-//       }
-//     } else {
-//       ejemplo = {};
-//     }
-//   });
-// }
+function showCalifications(calificaciones) {
+ for (let i = 0; i < calificaciones.length; i++) {
+     const e = calificaciones[i];
+     console.log("Asignatura ", e.asignatura);
+     console.log("Nota", e.nota);
+   }
+ }
+ function findEstudent(nombre, array) {
+  array.filter((miNuevoEstudiante) => {
+     if (miNuevoEstudiante.nombre === nombre) {
+       console.log("El nombre del estudainte es: ", miNuevoEstudiante.nombre);
+      console.log("La edad del estudaiante es: ", miNuevoEstudiante.edad);
+      if (miNuevoEstudiante.calificaciones.length !== 0) {
+        showCalifications(miNuevoEstudiante.calificaciones);
+      }
+     } else {
+       ejemplo = {};
+   }
+  });
+ }
 
-// findEstudent("Pedro", estudiantes);
+ findEstudent("Pedro", estudiantes);
+  
