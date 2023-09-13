@@ -35,7 +35,6 @@ function ejemplo(nombre){
   console.log(nombre)
 }
 
-
 ejemplo("Maria")
 ejemplo("Raul")
 
@@ -53,7 +52,7 @@ function showCalifications(calificaciones) {
      if (miNuevoEstudiante.nombre === nombre) {
        console.log("El nombre del estudainte es: ", miNuevoEstudiante.nombre);
       console.log("La edad del estudaiante es: ", miNuevoEstudiante.edad);
-      if (miNuevoEstudiante.calificaciones.length !== 0) {
+      if (miNuevoEstudiante.calificaciones.length !== 0)  {
         showCalifications(miNuevoEstudiante.calificaciones);
       }
      } else {
