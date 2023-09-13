@@ -114,5 +114,4 @@ while (solicitud !== 6) {
         }
       }
     }
-  }
 }
