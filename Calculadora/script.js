@@ -1,38 +1,33 @@
 let seleccion = 0;
+let total;
 
-function numeroFinal(){
-  if(resultado  => 0){
+function numeroFinal() {
   let numeroDos = parseInt(prompt("Ingresa el numero "));
- return numeroDos
+  return numeroDos;
+}
 
-  }
-
- function obtenerNumeros() {
+function obtenerNumeros() {
   let numeroUno = parseInt(prompt("Ingresa el numero "));
   let numeroDos = parseInt(prompt("Ingresa el numero "));
   return { numeroUno, numeroDos };
 }
 
 function suma() {
-  let resultado = 0;
-  const numeros = obtenerNumeros();
-   resultado = numeros.numeroUno, numeros.numeroDos;
-   console.log(resultado)
-
-  if (resultado)
-  {resultado = resultado + numeros
-  console.log(resultado);
-  }
-  else {
-    numeroFinal()
-
+  if (!total) {
+    const numeros = obtenerNumeros();
+     total = numeros.numeroUno + numeros.numeroDos;
+    console.log("El resultado de la suma es: " + total);
+  } else {
+    const nuevoNumero = numeroFinal();
+    total = total + nuevoNumero
+    console.log("El resultado de la suma es: " + total);
   }
 }
 
 function resta() {
   const numeros = obtenerNumeros();
-  let resultado2 = numeros.numeroUno - numeros.numeroDos;
-  console.log("El resultado de la resta es: " + resultado2);
+  let resultado = numeros.numeroUno - numeros.numeroDos;
+  console.log("El resultado de la resta es: " + resultado);
 }
 
 function multiplicacion(numeroUno, numeroDos) {
@@ -68,16 +63,15 @@ function operacionFinal() {
   else if (seleccion === 2) console.log(multiplicacion());
 }
 
-
 while (seleccion < 4) {
   console.log("---Evaluaciones ---");
   mostrarOperaciones();
   console.log("4 Salir");
-
+  mostrarSeleccion()
 
   if (seleccion === 1) {
-    const resultado = suma();
-    console.log("El resultado es : " + resultado);
+     suma()
+    //console.log("El resultado es : " + resultado);
   } else if (seleccion === 2) {
     const resultado = resta();
     //console.log("El resultado es : " + resultado);
@@ -86,9 +80,8 @@ while (seleccion < 4) {
   } else if (seleccion === 4) {
     console.log("No se selecciono formula ");
   }
-  
-  operacionFinal();
+
+//  operacionFinal();
 }
 //function obtenerNumeros() {
 //return {resultado}
-}
