@@ -1,11 +1,11 @@
 let seleccion = 0;
 let total;
 
+
 function numeroFinal() {
   let numeroDos = parseInt(prompt("Ingresa el numero "));
   return numeroDos;
 }
-
 function obtenerNumeros() {
   let numeroUno = parseInt(prompt("Ingresa el numero "));
   let numeroDos = parseInt(prompt("Ingresa el numero "));
@@ -25,9 +25,13 @@ function suma() {
 }
 
 function resta() {
+
   const numeros = obtenerNumeros();
-  let resultado = numeros.numeroUno - numeros.numeroDos;
-  console.log("El resultado de la resta es: " + resultado);
+  let resultado2 = numeros.numeroUno - numeros.numeroDos;
+  console.log("El resultado de la resta es: " + resultado2);
+
+  siguienteOperacion(resultado2)
+
 }
 
 function multiplicacion(numeroUno, numeroDos) {
@@ -43,11 +47,18 @@ function mostrarOperaciones() {
   console.log("3 multiplicacion ");
 }
 
-function siguienteOperacion(resultado) {
-  //seleccion2 = prompt("Ingresa el numero evaluacion ");
+function siguienteOperacion(x) {
+
   console.log("Cual es la siguiente operacion que desea realizar");
+
   mostrarOperaciones();
   mostrarSeleccion();
+
+  const nuevoNumero = numeroFinal();
+  const res = x - nuevoNumero
+  console.log("El resultado es: " +res);
+
+  siguienteOperacion()
 }
 
 function mostrarSeleccion() {
@@ -56,8 +67,6 @@ function mostrarSeleccion() {
 }
 
 function operacionFinal() {
-  siguienteOperacion();
-
   if (seleccion === 1) console.log(suma());
   else if (seleccion === 2) console.log(resta());
   else if (seleccion === 2) console.log(multiplicacion());
@@ -66,8 +75,9 @@ function operacionFinal() {
 while (seleccion < 4) {
   console.log("---Evaluaciones ---");
   mostrarOperaciones();
-  console.log("4 Salir");
+  console.log("4 Salir");  
   mostrarSeleccion()
+
 
   if (seleccion === 1) {
      suma()
@@ -80,6 +90,8 @@ while (seleccion < 4) {
   } else if (seleccion === 4) {
     console.log("No se selecciono formula ");
   }
+
+
 
 //  operacionFinal();
 }
