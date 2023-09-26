@@ -1,4 +1,4 @@
-let seleccion = 0;
+//let seleccion = 0;
 let total;
 
 function numeroFinal() {
@@ -38,7 +38,8 @@ function multiplicacion(numeroUno, numeroDos) {
   //console.log(resultado3);
   //return resultado3;
 }
-function mostrarOperaciones() {
+function mostrarMenu() {
+  console.log("---Evaluaciones ---");
   console.log("1 suma ");
   console.log("2 resta");
   console.log("3 multiplicacion ");
@@ -48,7 +49,7 @@ function siguienteOperacion(x) {
   console.log("Cual es la siguiente operacion que desea realizar");
 
   mostrarOperaciones();
-  mostrarSeleccion();
+  //mostrarSeleccion();
 
   const nuevoNumero = numeroFinal();
   const res = x - nuevoNumero;
@@ -58,31 +59,48 @@ function siguienteOperacion(x) {
 }
 
 function mostrarSeleccion() {
-  seleccion = parseFloat(prompt("Ingresa el numero evaluacion "));
+  const  seleccion = parseFloat(prompt("Ingresa el numero evaluacion "));
   return seleccion;
 }
- function mosrearEcuaciones()
-{
-  if 
-}
-while (seleccion < 4) {
-  console.log("---Evaluaciones ---");
-  mostrarOperaciones();
-  mostrarSeleccion();
 
-  if (seleccion === 1) {
-    suma();
-    //console.log("El resultado es : " + resultado);
-  } else if (seleccion === 2) {
-    const resultado = resta();
-    //console.log("El resultado es : " + resultado);
-  } else if (seleccion === 3) {
-    console.log("El resultado es : ", multiplicacion());
-  } else if (seleccion === 4) {
-    console.log("No se selecciono formula ");
+function mostrarOperaciones(seleccion) {
+  
+  while (seleccion < 4) {
+    mostrarMenu()
+    const resultado = mostrarSeleccion();
+    
+    if (resultado === 1) {
+      suma();
+    } else if (resultado === 2) {
+       resta();
+    } else if (resultado === 3) {
+      console.log("El resultado es : ", multiplicacion());
+    } else if (resultado === 4) {
+      console.log("No se selecciono formula ");
+    }
   }
-
-  //  operacionFinal();
 }
+mostrarOperaciones(0);
+
+
+// while (seleccion < 4) {
+//   console.log("---Evaluaciones ---");
+//   mostrarOperaciones();
+//   mostrarSeleccion();
+
+//   if (seleccion === 1) {
+//     suma();
+//     //console.log("El resultado es : " + resultado);
+//   } else if (seleccion === 2) {
+//     const resultado = resta();
+//     //console.log("El resultado es : " + resultado);
+//   } else if (seleccion === 3) {
+//     console.log("El resultado es : ", multiplicacion());
+//   } else if (seleccion === 4) {
+//     console.log("No se selecciono formula ");
+//   }
+
+//  operacionFinal();
+//}
 //function obtenerNumeros() {
 //return {resultado}
