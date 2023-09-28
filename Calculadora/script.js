@@ -25,82 +25,86 @@ function suma() {
 }
 
 function resta() {
-  const numeros = obtenerNumeros();
-  let resultado2 = numeros.numeroUno - numeros.numeroDos;
-  console.log("El resultado de la resta es: " + resultado2);
-
-  siguienteOperacion(resultado2);
+  if (!total) {
+    const numeros = obtenerNumeros();
+    total = numeros.numeroUno - numeros.numeroDos;
+    console.log("El resultado de la resta es: " + total);
+  } else {
+    const nuevoNumero = numeroFinal();
+    total = total - nuevoNumero;
+    console.log("El resultado de la resta es: " + total);
+  }
 }
+//   }
+//   const numeros = obtenerNumeros();
+//   let resultado2 = numeros.numeroUno - numeros.numeroDos;
+//   console.log("El resultado de la resta es: " + resultado2);
 
-function multiplicacion(numeroUno, numeroDos) {
-  const numeros = obtenerNumeros();
-  return numeros.numeroUno * numeros.numeroDos;
+//   siguienteOperacion(resultado2);
+// }
+
+function multiplicacion() {
+  if (!total) {
+    const numeros = obtenerNumeros();
+    total = numeros.numeroUno * numeros.numeroDos;
+    return numeros.numeroUno * numeros.numeroDos;
+  } else {
+    const nuevoNumero = numeroFinal();
+    total = total * nuevoNumero;
+    return total;
+   // console.log("El resultado de la multiplicacion es: " + total);
+  }
+  //   }
+
   //console.log(resultado3);
   //return resultado3;
 }
+
 function mostrarMenu() {
   console.log("---Evaluaciones ---");
   console.log("1 suma ");
   console.log("2 resta");
   console.log("3 multiplicacion ");
   console.log("4 Salir");
+
+  const resultado = mostrarSeleccion();
+  return resultado;
 }
-function siguienteOperacion(x) {
-  console.log("Cual es la siguiente operacion que desea realizar");
 
-  mostrarOperaciones();
-  //mostrarSeleccion();
+// function siguienteOperacion(x) {
 
-  const nuevoNumero = numeroFinal();
-  const res = x - nuevoNumero;
-  console.log("El resultado es: " + res);
-
-  siguienteOperacion(res);
-}
+//   const seleccion = mostrarMenu();
+//   //mostrarSeleccion();
+//   calcular(seleccion)
+// }
 
 function mostrarSeleccion() {
-  const  seleccion = parseFloat(prompt("Ingresa el numero evaluacion "));
+  const seleccion = parseFloat(prompt("Ingresa el numero evaluacion "));
   return seleccion;
 }
 
-function mostrarOperaciones(seleccion) {
-  
+function mostrarOperaciones() {
+  const seleccion = mostrarMenu();
   while (seleccion < 4) {
-    mostrarMenu()
-    const resultado = mostrarSeleccion();
-    
-    if (resultado === 1) {
-      suma();
-    } else if (resultado === 2) {
-       resta();
-    } else if (resultado === 3) {
-      console.log("El resultado es : ", multiplicacion());
-    } else if (resultado === 4) {
-      console.log("No se selecciono formula ");
+    calcular(seleccion);
+    if (seleccion != 4) {
+      mostrarOperaciones();
     }
   }
 }
-mostrarOperaciones(0);
 
+function calcular(resultado) {
+  if (resultado === 1) {
+    suma();
+  } else if (resultado === 2) {
+    resta();
+  } else if (resultado === 3) {
+    //c
+    
+    console.log("El resultado es : ", multiplicacion());
+  } else if (resultado === 4) {
+    console.log("No se selecciono formula ");
+  }
+}
 
-// while (seleccion < 4) {
-//   console.log("---Evaluaciones ---");
-//   mostrarOperaciones();
-//   mostrarSeleccion();
-
-//   if (seleccion === 1) {
-//     suma();
-//     //console.log("El resultado es : " + resultado);
-//   } else if (seleccion === 2) {
-//     const resultado = resta();
-//     //console.log("El resultado es : " + resultado);
-//   } else if (seleccion === 3) {
-//     console.log("El resultado es : ", multiplicacion());
-//   } else if (seleccion === 4) {
-//     console.log("No se selecciono formula ");
-//   }
-
-//  operacionFinal();
-//}
-//function obtenerNumeros() {
-//return {resultado}
+mostrarOperaciones();
