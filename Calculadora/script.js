@@ -85,11 +85,15 @@ function mostrarSeleccion() {
 
 function mostrarOperaciones() {
   const seleccion = mostrarMenu();
+  console.log(seleccion)
   while (seleccion < 4) {
-    calcular(seleccion);
-    if (seleccion != 4) {
-      mostrarOperaciones();
-    }
+    if(seleccion === 4) break;
+    // if (seleccion != 4) {
+      calcular(seleccion);
+      mostrarOperaciones()
+    //}
+  // console.log("Saliendo de la aplicación")
+ //  break; 
   }
 }
 
@@ -99,12 +103,9 @@ function calcular(resultado) {
   } else if (resultado === 2) {
     resta();
   } else if (resultado === 3) {
-    //c
-    
     console.log("El resultado es : ", multiplicacion());
   } else if (resultado === 4) {
-    console.log("No se selecciono formula ");
+    console.log("No se selecciono formula ")
   }
 }
-
 mostrarOperaciones();
